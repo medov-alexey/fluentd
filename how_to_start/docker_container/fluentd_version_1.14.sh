@@ -45,3 +45,6 @@ docker logs $app
 echo ""
 echo "Fluentd started successfully =)"
 echo ""
+
+docker exec -u root -it $app apk update > /dev/null 2>&1
+docker exec -u root -it $app apk add nano htop bash > /dev/null 2>&1
