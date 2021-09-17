@@ -30,7 +30,7 @@ chmod 777 $log_dir
 
 #------------------------
 
-docker run -d --name $app -p 24224:24224 -p 24224:24224/udp -v $log_dir:/fluentd/log fluent/fluentd:$version
+docker run -d --restart always --name $app -p 24224:24224 -p 24224:24224/udp -v $log_dir:/fluentd/log fluent/fluentd:$version
 
 #------------------------
 
